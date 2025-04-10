@@ -78,7 +78,9 @@ yarn android
 
 - 🎯 Component-based architecture
 - 🧩 Custom `ProductCard` with image, name & price
-- 🐻 Mascot screen: Feed & play mechanics
+- 🐻 Interactive `MascotFeeder` component with feed & play mechanics
+- 🍔 Hunger status bar with mood-based colors
+- 🎮 Real-time state updates when feeding or playing with mascots
 - 🎨 Dynamic contrast text with `useContrastColor()`
 - 📂 Logical file structure with `/src`
 
@@ -88,11 +90,11 @@ yarn android
 
 ```
 /src
-  /components     → Reusable UI (e.g. ProductCard, Button)
+  /components     → Reusable UI (e.g. ProductCard, Button, MascotFeeder)
   /screens        → App screens (Home, Mascot)
   /styles         → Design tokens (colors, spacing)
   /utils          → Custom hooks (e.g. useContrastColor)
-  /models         → Mascot logic or domain models
+  /models         → Mascot logic and domain models
   /data           → Static toy data (toys.json)
 ```
 
@@ -111,10 +113,27 @@ const textColor = getContrastColor('#FFD700'); // → "#000000"
 
 ---
 
+## 🧸 MascotFeeder Component
+
+Our new `MascotFeeder` component connects the visual `Mascot` with the data model to create an interactive experience:
+
+```tsx
+<MascotFeeder initialName="Bamseven" initialEmoji="🧸" />
+```
+
+Features:
+
+- Real-time hunger status tracking with color-coded progress bar
+- Interactive "Feed" and "Play" buttons using our custom Button component
+- Dynamic mood changes based on hunger level
+- Persistent state management for each mascot instance
+
+---
+
 ## 🚀 What's Next?
 
 - ⏳ Add backend/API integration (fallback to JSON mock)
-- 🕹️ Build game loop for mascot mini-game
+- 🕹️ Enhance mascot mini-game with more interactions
 - 📍 Add geolocation for "store check-in" system
 - 🧠 Add animation & state management with context or Zustand
 

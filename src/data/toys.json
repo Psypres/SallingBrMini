@@ -1,0 +1,22 @@
+[
+  { "id": "t1", "name": "Bamse", "emoji": "🧸", "price": 49, "category": "plush", "rarity": "common" },
+  { "id": "t2", "name": "Lynbil", "emoji": "🏎️", "price": 89, "category": "vehicle", "rarity": "rare" },
+  { "id": "t3", "name": "Dukke", "emoji": "👧", "price": 59, "category": "doll", "rarity": "common" },
+  { "id": "t4", "name": "Helikopter", "emoji": "🚁", "price": 109, "category": "vehicle", "rarity": "legendary" },
+  { "id": "t5", "name": "Byggeklodser", "emoji": "🧱", "price": 79, "category": "building", "rarity": "rare" },
+  { "id": "t6", "name": "Tegnebog", "emoji": "🎨", "price": 34, "category": "creative", "rarity": "common" },
+  { "id": "t7", "name": "Actionfigur", "emoji": "🦸", "price": 99, "category": "action", "rarity": "rare" },
+  { "id": "t8", "name": "Tog", "emoji": "🚂", "price": 69, "category": "vehicle", "rarity": "common" },
+  { "id": "t9", "name": "Sværd", "emoji": "🗡️", "price": 54, "category": "roleplay", "rarity": "common" },
+  { "id": "t10", "name": "Køkken", "emoji": "🍳", "price": 149, "category": "roleplay", "rarity": "legendary" },
+  { "id": "t11", "name": "Robot", "emoji": "🤖", "price": 129, "category": "tech", "rarity": "rare" },
+  { "id": "t12", "name": "Bold", "emoji": "⚽", "price": 39, "category": "sport", "rarity": "common" },
+  { "id": "t13", "name": "Vandpistol", "emoji": "🔫", "price": 44, "category": "summer", "rarity": "common" },
+  { "id": "t14", "name": "Krammefår", "emoji": "🐑", "price": 45, "category": "plush", "rarity": "common" },
+  { "id": "t15", "name": "Lego Sæt", "emoji": "🧩", "price": 119, "category": "building", "rarity": "rare" },
+  { "id": "t16", "name": "Tryllehat", "emoji": "🎩", "price": 79, "category": "roleplay", "rarity": "rare" },
+  { "id": "t17", "name": "Fjernstyret bil", "emoji": "🚗", "price": 139, "category": "tech", "rarity": "legendary" },
+  { "id": "t18", "name": "Mikrofon", "emoji": "🎤", "price": 64, "category": "creative", "rarity": "common" },
+  { "id": "t19", "name": "Eventyrbog", "emoji": "📖", "price": 29, "category": "book", "rarity": "common" },
+  { "id": "t20", "name": "Trommesæt", "emoji": "🥁", "price": 99, "category": "music", "rarity": "rare" }
+]

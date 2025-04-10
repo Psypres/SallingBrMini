@@ -1,97 +1,176 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🎮 SallingMiniBr – React Native Playground
 
-# Getting Started
+<div align="center">
+  
+[![Made with React Native](https://img.shields.io/badge/React_Native-0.79-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Platforms](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-green?style=for-the-badge&logo=android&logoColor=white)](https://reactnative.dev/)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A modern **React Native** app starter built with performance, structure, and storytelling in mind.  
+Designed for prototyping consumer-facing experiences – starting with **Fætter BR** mini-games and toy browsing.
 
-## Step 1: Start Metro
+[Features](#-features) • [Getting Started](#%EF%B8%8F-getting-started) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+<img src="https://via.placeholder.com/800x400.png?text=SallingMiniBr+App+Preview" alt="SallingMiniBr Preview" width="800"/>
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+</div>
 
-```sh
-# Using npm
+---
+
+## 🧠 Project Goals
+
+- 🔁 Reusable components with atomic design principles
+- 🎨 Design token-driven styling (Fætter BR color palette)
+- 🧸 Gamified mascot experience (feed/play)
+- 🚀 Quick iteration for new features and concepts
+- 📱 Cross-platform from day one
+
+---
+
+## 🛠️ Stack
+
+| Tech              | Description                          |
+| ----------------- | ------------------------------------ |
+| React Native 0.79 | Cross-platform core                  |
+| TypeScript        | Strong typing and tooling            |
+| NativeWind        | Tailwind-style utility classes       |
+| React Navigation  | Navigation made simple               |
+| JSON Mock Data    | Lightweight prototyping for toys     |
+| Custom Hooks      | `useContrastColor` for accessibility |
+
+---
+
+## ⚙️ Getting Started
+
+> Make sure you've set up your environment:  
+> 👉 https://reactnative.dev/docs/environment-setup
+
+### 📦 1. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 🚇 2. Start Metro bundler
+
+```bash
 npm start
-
-# OR using Yarn
+# or
 yarn start
 ```
 
-## Step 2: Build and run your app
+### 📱 3. Run on Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
-### iOS
+> Emulator not working? Plug in a device with USB Debugging enabled!
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## ✨ Features
 
-```sh
-bundle install
+- 🎯 Component-based architecture
+- 🧩 Custom `ProductCard` with image, name & price
+- 🐻 Mascot screen: Feed & play mechanics
+- 🎨 Dynamic contrast text with `useContrastColor()`
+- 📂 Logical file structure with `/src`
+
+---
+
+## 📁 File Structure
+
+```
+/src
+  /components     → Reusable UI (e.g. ProductCard, Button)
+  /screens        → App screens (Home, Mascot)
+  /styles         → Design tokens (colors, spacing)
+  /utils          → Custom hooks (e.g. useContrastColor)
+  /models         → Mascot logic or domain models
+  /data           → Static toy data (toys.json)
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## 🧪 Contrast Color Hook
+
+Easily calculate whether to show dark or light text based on background:
+
+```ts
+const {getContrastColor} = useContrastColor();
+const textColor = getContrastColor('#FFD700'); // → "#000000"
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+> Perfect for dynamic UI and accessibility-friendly color palettes.
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+## 🚀 What's Next?
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+- ⏳ Add backend/API integration (fallback to JSON mock)
+- 🕹️ Build game loop for mascot mini-game
+- 📍 Add geolocation for "store check-in" system
+- 🧠 Add animation & state management with context or Zustand
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 💬 Author
 
-Now that you have successfully run the app, let's make changes!
+**Michael Hovgaard** – [github.com/Psypres](https://github.com/Psypres)  
+Crafted with love, React, and a little ADHD-driven curiosity.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+---
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🏁 License
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+This project is open source and available under the MIT License.
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
+## ✨ Inspiration
 
-### Now what?
+> "Sometimes the best user experience comes from someone who also designs worlds, not just UIs."  
+> – You, probably.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
+## 📚 Documentation
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+| Resource          | Link                                  |
+| ----------------- | ------------------------------------- |
+| API Reference     | [View Docs](./docs/api.md)            |
+| Component Library | [View Storybook](./docs/storybook.md) |
+| Architecture      | [View Design](./docs/architecture.md) |
+| Contributing      | [View Guidelines](./CONTRIBUTING.md)  |
 
-# Learn More
+---
 
-To learn more about React Native, take a look at the following resources:
+## 🤝 Contributing
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 💖 Support
+
+Give a ⭐️ if this project helped you!
+
+<a href="https://www.buymeacoffee.com/your-username" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150">
+</a>
+
+---
+
+## 📝 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for more information on what has changed recently.
